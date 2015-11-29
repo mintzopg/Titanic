@@ -1,5 +1,5 @@
 # Kaggle Titanic attempt
-The script is doinng the following.
+The script is doing the following.
 - load the data
 - do some exploratory plots
 - data wrangling to get a suitable data set for training and testing
