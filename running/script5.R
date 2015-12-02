@@ -207,6 +207,10 @@ setcolorder(test, c("Pclass", "Title", "Sex", "SibSp", "Parch", "Ticket", "Embar
 train$Survived <- ifelse(train$Survived == 1, "yes", "no");  train$Survived <- as.factor(train$Survived)
 predictors_2 <- names(train)[names(train) != labelName]
 
+# transform back to data.grame class only so it works with caret indexing
+train <- as.data.frame(train)
+test <- as.data.frame(test)
+
 c5o <- train(x = train[, predictors_2], y = train[, labelName], method = 'C5.0', trControl = myCtrl)
 c5o$results
 c5o$bestTune
