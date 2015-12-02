@@ -207,7 +207,7 @@ setcolorder(test, c("Pclass", "Title", "Sex", "SibSp", "Parch", "Ticket", "Embar
 train$Survived <- ifelse(train$Survived == 1, "yes", "no");  train$Survived <- as.factor(train$Survived)
 predictors_2 <- names(train)[names(train) != labelName]
 
-# transform back to data.grame class only so it works with caret indexing
+# transform back to data.frame class only so it works with caret indexing
 train <- as.data.frame(train)
 test <- as.data.frame(test)
 
